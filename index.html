@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio | Sersanda Bagas Oktavio</title>
+        <link rel="icon" type="image/png" href="images/profil_bgg.png" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="#home">Sersanda Bagas Oktavio</a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#about" class="nav-link">About Me</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <section id="home" class="home-section">
+            <div class="home-container">
+                <div class="home-content">
+                    <h1 class="home-title">
+                        <span class="highlight"
+                            >Finest in digital experience, design and
+                            development</span
+                        >
+                    </h1>
+                    <h2 class="home-subtitle">
+                        trusted in academic assistance for tasks, theses, and
+                        journals
+                    </h2>
+                    <div class="home-buttons">
+                        <a href="#portfolio" class="btn btn-primary"
+                            >Explore More</a
+                        >
+                        <a href="#contact" class="btn btn-secondary"
+                            >Contact Me</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <h2 class="section-title">Portfolio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" onclick="openPopup('popup1')">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <i class="fab fa-laravel"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Goverment Project</h3>
+                            <p class="portfolio-description">
+                                SIPANDU-KAMPUNG BULANG
+                            </p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">fonnte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" onclick="openPopup('popup2')">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Website Media</h3>
+                            <p class="portfolio-description">
+                                hariansiber.com <br />
+                                (PT. MELILEA INDAH GEMILANG)
+                            </p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Wordpress</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" onclick="openPopup('popup3')">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Website Media</h3>
+                            <p class="portfolio-description">
+                                detakmedia.co.id <br />
+                                (PT. GEMILANG INDAH MADANI)
+                            </p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Wordpress</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="portfolio-item hidden-portfolio"
+                        onclick="openPopup('popup4')"
+                    >
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <i class="fab fa-php"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Theses project</h3>
+                            <p class="portfolio-description">
+                                CAMP MMA - TANJUNGPINANG
+                            </p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">PHP Native</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">Scanner Tools</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="portfolio-item hidden-portfolio"
+                        onclick="openPopup('popup5')"
+                    >
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Theses Project</h3>
+                            <p class="portfolio-description">
+                                Sistem Informasi Pengelolaan Surat SMKN 2
+                                TANJUNGPINANG
+                            </p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Codeigniter</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item hidden-portfolio"
+                        onclick="openPopup('popup6')"
+                    >
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">
+                                Push WhatsApp Notification
+                            </h3>
+                            <p class="portfolio-description">
+                                Implementation of fonnte as a tool to create
+                                push notifications for WhatsApp on the
+                                Sipandu-Kampungbulang application
+                            </p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Codeigniter</span>
+                                <span class="tech-tag">DOKU API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item hidden-portfolio"
+                        onclick="openPopup('popup7')"
+                    >
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Payment Gateway</h3>
+                            <p class="portfolio-description">
+                                Implementation of DOKU Payment to CAMP MMA
+                                Project - TANJUNGPINANG for monthly member
+                                payments
+                            </p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Codeigniter</span>
+                                <span class="tech-tag">DOKU API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item hidden-portfolio"
+                        onclick="openPopup('popup8')"
+                    >
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <i class="fab fa-figma"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Web Design</h3>
+                            <p class="portfolio-description">
+                                STT Indonesia Tanjungpinang Student Projects for
+                                Mini Project 2 Course
+                            </p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-actions">
+                    <button id="showMoreBtn" class="btn btn-secondary">
+                        <span>See More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--bagian popup-->
+        <!-- Popup 1 -->
+        <div id="popup1" class="popup-overlay">
+            <div class="popup-content">
+                <button class="close-popup" onclick="closePopup('popup1')">
+                    &times;
+                </button>
+                <div class="gallery-slider">
+                    <div class="slider-container">
+                        <div class="slider-track" id="slider1">
+                            <div class="slide">
+                                <i class="fab fa-laravel"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button
+                            class="slider-btn prev"
+                            onclick="prevSlide('slider1')"
+                        >
+                            &#10094;
+                        </button>
+                        <button
+                            class="slider-btn next"
+                            onclick="nextSlide('slider1')"
+                        >
+                            &#10095;
+                        </button>
+                    </div>
+                    <div class="slider-dots" id="dots1">
+                        <span
+                            class="dot active"
+                            onclick="goToSlide('slider1', 0)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider1', 1)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider1', 2)"
+                        ></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup 2 -->
+        <div id="popup2" class="popup-overlay">
+            <div class="popup-content">
+                <button class="close-popup" onclick="closePopup('popup2')">
+                    &times;
+                </button>
+                <div class="gallery-slider">
+                    <div class="slider-container">
+                        <div class="slider-track" id="slider2">
+                            <div class="slide">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button
+                            class="slider-btn prev"
+                            onclick="prevSlide('slider2')"
+                        >
+                            &#10094;
+                        </button>
+                        <button
+                            class="slider-btn next"
+                            onclick="nextSlide('slider2')"
+                        >
+                            &#10095;
+                        </button>
+                    </div>
+                    <div class="slider-dots" id="dots2">
+                        <span
+                            class="dot active"
+                            onclick="goToSlide('slider2', 0)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider2', 1)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider2', 2)"
+                        ></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup 3 -->
+        <div id="popup3" class="popup-overlay">
+            <div class="popup-content">
+                <button class="close-popup" onclick="closePopup('popup3')">
+                    &times;
+                </button>
+                <div class="gallery-slider">
+                    <div class="slider-container">
+                        <div class="slider-track" id="slider3">
+                            <div class="slide">
+                                <i class="fab fa-vuejs"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button
+                            class="slider-btn prev"
+                            onclick="prevSlide('slider3')"
+                        >
+                            &#10094;
+                        </button>
+                        <button
+                            class="slider-btn next"
+                            onclick="nextSlide('slider3')"
+                        >
+                            &#10095;
+                        </button>
+                    </div>
+                    <div class="slider-dots" id="dots3">
+                        <span
+                            class="dot active"
+                            onclick="goToSlide('slider3', 0)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider3', 1)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider3', 2)"
+                        ></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup 4 -->
+        <div id="popup4" class="popup-overlay">
+            <div class="popup-content">
+                <button class="close-popup" onclick="closePopup('popup4')">
+                    &times;
+                </button>
+                <div class="gallery-slider">
+                    <div class="slider-container">
+                        <div class="slider-track" id="slider4">
+                            <div class="slide">
+                                <i class="fab fa-angular"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button
+                            class="slider-btn prev"
+                            onclick="prevSlide('slider4')"
+                        >
+                            &#10094;
+                        </button>
+                        <button
+                            class="slider-btn next"
+                            onclick="nextSlide('slider4')"
+                        >
+                            &#10095;
+                        </button>
+                    </div>
+                    <div class="slider-dots" id="dots4">
+                        <span
+                            class="dot active"
+                            onclick="goToSlide('slider4', 0)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider4', 1)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider4', 2)"
+                        ></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup 5 -->
+        <div id="popup5" class="popup-overlay">
+            <div class="popup-content">
+                <button class="close-popup" onclick="closePopup('popup5')">
+                    &times;
+                </button>
+                <div class="gallery-slider">
+                    <div class="slider-container">
+                        <div class="slider-track" id="slider5">
+                            <div class="slide">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button
+                            class="slider-btn prev"
+                            onclick="prevSlide('slider5')"
+                        >
+                            &#10094;
+                        </button>
+                        <button
+                            class="slider-btn next"
+                            onclick="nextSlide('slider5')"
+                        >
+                            &#10095;
+                        </button>
+                    </div>
+                    <div class="slider-dots" id="dots5">
+                        <span
+                            class="dot active"
+                            onclick="goToSlide('slider5', 0)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider5', 1)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider5', 2)"
+                        ></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup 6 -->
+        <div id="popup6" class="popup-overlay">
+            <div class="popup-content">
+                <button class="close-popup" onclick="closePopup('popup6')">
+                    &times;
+                </button>
+                <div class="gallery-slider">
+                    <div class="slider-container">
+                        <div class="slider-track" id="slider6">
+                            <div class="slide">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fas fa-mobile"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button
+                            class="slider-btn prev"
+                            onclick="prevSlide('slider6')"
+                        >
+                            &#10094;
+                        </button>
+                        <button
+                            class="slider-btn next"
+                            onclick="nextSlide('slider6')"
+                        >
+                            &#10095;
+                        </button>
+                    </div>
+                    <div class="slider-dots" id="dots6">
+                        <span
+                            class="dot active"
+                            onclick="goToSlide('slider6', 0)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider6', 1)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider6', 2)"
+                        ></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup 7 -->
+        <div id="popup7" class="popup-overlay">
+            <div class="popup-content">
+                <button class="close-popup" onclick="closePopup('popup7')">
+                    &times;
+                </button>
+                <div class="gallery-slider">
+                    <div class="slider-container">
+                        <div class="slider-track" id="slider7">
+                            <div class="slide">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                            <div class="slide"><i class="fas fa-edit"></i></div>
+                            <div class="slide">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button
+                            class="slider-btn prev"
+                            onclick="prevSlide('slider7')"
+                        >
+                            &#10094;
+                        </button>
+                        <button
+                            class="slider-btn next"
+                            onclick="nextSlide('slider7')"
+                        >
+                            &#10095;
+                        </button>
+                    </div>
+                    <div class="slider-dots" id="dots7">
+                        <span
+                            class="dot active"
+                            onclick="goToSlide('slider7', 0)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider7', 1)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider7', 2)"
+                        ></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup 8 -->
+        <div id="popup8" class="popup-overlay">
+            <div class="popup-content">
+                <button class="close-popup" onclick="closePopup('popup8')">
+                    &times;
+                </button>
+                <div class="gallery-slider">
+                    <div class="slider-container">
+                        <div class="slider-track" id="slider8">
+                            <div class="slide">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="slide">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="slide"><i class="fas fa-code"></i></div>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button
+                            class="slider-btn prev"
+                            onclick="prevSlide('slider8')"
+                        >
+                            &#10094;
+                        </button>
+                        <button
+                            class="slider-btn next"
+                            onclick="nextSlide('slider8')"
+                        >
+                            &#10095;
+                        </button>
+                    </div>
+                    <div class="slider-dots" id="dots8">
+                        <span
+                            class="dot active"
+                            onclick="goToSlide('slider8', 0)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider8', 1)"
+                        ></span>
+                        <span
+                            class="dot"
+                            onclick="goToSlide('slider8', 2)"
+                        ></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I am an Information Systems student specializing in
+                            web design dan development, with 3 years of
+                            experience using PHP (Laravel, CodeIgniter, and
+                            Native). I enjoy creating attractive, responsive,
+                            and functional websites, whether through custom
+                            coding or using WordPress. For me, every line of
+                            code is a step toward building meaningful digital
+                            solutions.
+                        </p>
+                        <div class="skills">
+                            <h3 class="section-title">Skills</h3>
+                            <div class="skills-grid">
+                                <div class="skill-icon-item skill-laravel">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-laravel"></i>
+                                    </div>
+                                    <span class="skill-name">Laravel</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+
+                                <div class="skill-icon-item skill-ci">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <span class="skill-name">CodeIgniter</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+
+                                <div class="skill-icon-item skill-figma">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-figma"></i>
+                                    </div>
+                                    <span class="skill-name">Figma</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+
+                                <div class="skill-icon-item skill-javascript">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-js-square"></i>
+                                    </div>
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+
+                                <div class="skill-icon-item skill-mysql">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <span class="skill-name">MySQL</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+
+                                <div class="skill-icon-item skill-docker">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-docker"></i>
+                                    </div>
+                                    <span class="skill-name">Docker</span>
+                                    <span class="skill-level">Average</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>sersandabagas8@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone / WhatsApp</h3>
+                                <p>+62 838 2397 0985</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Location</h3>
+                                <p>Tanjungpinang, Riau Islands, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link"
+                                ><i class="fab fa-linkedin"></i
+                            ></a>
+                            <a
+                                href="https://github.com/sersanda1407"
+                                class="social-link"
+                                target="_blank"
+                                ><i class="fab fa-github"></i
+                            ></a>
+                            <a
+                                href="https://www.instagram.com/sersandaabagas/"
+                                class="social-link"
+                                target="_blank"
+                                ><i class="fab fa-instagram"></i
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input
+                                    type="text"
+                                    id="name_to_wa"
+                                    placeholder="Nama Lengkap"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <input
+                                    type="email"
+                                    id="email_to_wa"
+                                    placeholder="Email Address"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <input
+                                    type="text"
+                                    id="subject_to_wa"
+                                    placeholder="Subject"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <textarea
+                                    id="message_to_wa"
+                                    rows="5"
+                                    placeholder="Message"
+                                    required
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Send Message
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Sersanda Bagas Oktavio. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
