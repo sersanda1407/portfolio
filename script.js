@@ -191,8 +191,13 @@ document.getElementById("showMoreBtn").click();
 
 // Data slider untuk semua popup
 const sliders = {};
+const totalSlidesArray = [3, 3, 2, 2, 2, 6, 4, 2]; // jumlah slide tiap slider
+
 for (let i = 1; i <= 8; i++) {
-  sliders[`slider${i}`] = { currentIndex: 0, totalSlides: 3 };
+  sliders[`slider${i}`] = {
+    currentIndex: 0,
+    totalSlides: totalSlidesArray[i - 1],
+  };
 }
 
 // Fungsi untuk membuka popup
