@@ -34,24 +34,108 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Form submission
+// Form submission dengan notifikasi
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
+  contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // Get form values
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
+    // Get form values - PERBAIKI ID ELEMENT
+    const name = document.getElementById("name_to_wa").value;
+    const email = document.getElementById("email_to_wa").value;
+    const subject = document.getElementById("subject_to_wa").value;
+    const message = document.getElementById("message_to_wa").value;
 
-    // In a real application, you would send this data to a server
-    // For this example, we'll just show an alert
-    alert(`Terima kasih ${name}! Pesan Anda telah berhasil dikirim.`);
+    // Get submit button
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
 
-    // Reset form
-    contactForm.reset();
+    // Show loading state
+    submitBtn.classList.add("btn-loading");
+    submitBtn.innerHTML = '<span class="btn-text">Mengirim...</span>';
+
+    try {
+      // Simulate API call delay
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      // Show success notification
+      showNotification(
+        "Pesan Terkirim!",
+        `Terima kasih ${name}! Pesan Anda telah berhasil dikirim.`,
+        "success",
+      );
+
+      // Reset form
+      contactForm.reset();
+    } catch (error) {
+      // Show error notification
+      showNotification(
+        "Gagal Mengirim!",
+        "Maaf, terjadi kesalahan saat mengirim pesan. Silakan coba lagi.",
+        "error",
+      );
+    } finally {
+      // Reset button state
+      submitBtn.classList.remove("btn-loading");
+      submitBtn.innerHTML = originalText;
+    }
+  });
+}
+
+// Notification function
+function showNotification(title, message, type = "success") {
+  // Remove existing notification
+  const existingNotification = document.querySelector(".notification");
+  if (existingNotification) {
+    existingNotification.remove();
+  }
+
+  // Create notification element
+  const notification = document.createElement("div");
+  notification.className = `notification ${type}`;
+
+  const icon = type === "success" ? "✓" : "⚠️";
+
+  notification.innerHTML = `
+        <div class="notification-icon">${icon}</div>
+        <div class="notification-content">
+            <div class="notification-title">${title}</div>
+            <div class="notification-message">${message}</div>
+        </div>
+        <div class="notification-progress"></div>
+    `;
+
+  // Add to page
+  document.body.appendChild(notification);
+
+  // Show notification
+  setTimeout(() => {
+    notification.classList.add("show");
+  }, 100);
+
+  // Auto hide after 5 seconds
+  setTimeout(() => {
+    notification.classList.remove("show");
+    notification.classList.add("hide");
+
+    // Remove from DOM after animation
+    setTimeout(() => {
+      if (notification.parentNode) {
+        notification.parentNode.removeChild(notification);
+      }
+    }, 500);
+  }, 5000);
+
+  // Close on click
+  notification.addEventListener("click", () => {
+    notification.classList.remove("show");
+    notification.classList.add("hide");
+
+    setTimeout(() => {
+      if (notification.parentNode) {
+        notification.parentNode.removeChild(notification);
+      }
+    }, 500);
   });
 }
 
@@ -191,7 +275,7 @@ document.getElementById("showMoreBtn").click();
 
 // Data slider untuk semua popup
 const sliders = {};
-const totalSlidesArray = [3, 3, 2, 2, 2, 6, 4, 2]; // jumlah slide tiap slider
+const totalSlidesArray = [3, 3, 1, 2, 2, 6, 4, 2]; // jumlah slide tiap slider
 
 for (let i = 1; i <= 8; i++) {
   sliders[`slider${i}`] = {
