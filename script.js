@@ -61,7 +61,7 @@ if (contactForm) {
       // Show success notification
       showNotification(
         "Pesan Terkirim!",
-        `Terima kasih ${name}! Pesan Anda telah berhasil dikirim.`,
+        `Terima kasih ${name}! Pesan Anda berhasil dikirim.`,
         "success",
       );
 
@@ -275,9 +275,9 @@ document.getElementById("showMoreBtn").click();
 
 // Data slider untuk semua popup
 const sliders = {};
-const totalSlidesArray = [3, 3, 1, 2, 2, 6, 4, 2]; // jumlah slide tiap slider
+const totalSlidesArray = [3, 3, 1, 1, 4, 3, 3,1,1,4, 2]; // jumlah slide tiap slider
 
-for (let i = 1; i <= 8; i++) {
+for (let i = 1; i <= 11; i++) {
   sliders[`slider${i}`] = {
     currentIndex: 0,
     totalSlides: totalSlidesArray[i - 1],
