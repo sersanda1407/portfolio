@@ -757,10 +757,34 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Sersanda Bagas Oktavio. All rights reserved.</p>
+            <p class="visit-counter">Halaman ini telah diakses <span id="visitCount">0</span> kali</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function updateVisitCount() {
+            if (typeof(Storage) !== "undefined") {
+                let visitCount = localStorage.getItem('pageVisitCount');
+                
+                if (visitCount === null) {
+                    visitCount = 23;
+                }
+
+                visitCount = parseInt(visitCount) + 1;
+
+                localStorage.setItem('pageVisitCount', visitCount);
+
+                document.getElementById('visitCount').textContent = visitCount;
+            } else {
+
+                document.getElementById('visitCount').textContent = "0 (localStorage tidak didukung)";
+            }
+        }
+        
+        // Panggil fungsi saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', updateVisitCount);
+    </script>
 </body>
 
 </html>
